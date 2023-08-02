@@ -1,0 +1,47 @@
+<%= form_with(model: coach_par_time) do |form| %>
+  <% if coach_par_time.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(coach_par_time.errors.count, "error") %> prohibited this coach_par_time from being saved:</h2>
+
+      <ul>
+        <% coach_par_time.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :from, style: "display: block" %>
+    <%= form.text_field :from %>
+  </div>
+
+  <div>
+    <%= form.label :to, style: "display: block" %>
+    <%= form.text_field :to %>
+  </div>
+
+  <div>
+    <%= form.label :booked_slot, style: "display: block" %>
+    <%= form.check_box :booked_slot %>
+  </div>
+
+  <div>
+    <%= form.label :sno, style: "display: block" %>
+    <%= form.text_field :sno %>
+  </div>
+
+  <div>
+    <%= form.label :coach_par_avail_id, style: "display: block" %>
+    <%= form.number_field :coach_par_avail_id %>
+  </div>
+
+  <div>
+    <%= form.label :dates, style: "display: block" %>
+    <%= form.date_field :dates %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

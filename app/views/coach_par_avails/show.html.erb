@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @coach_par_avail %>
+
+<div>
+  <%= link_to "Edit this coach par avail", edit_coach_par_avail_path(@coach_par_avail) %> |
+  <%= link_to "Back to coach par avails", coach_par_avails_path %>
+
+  <%= button_to "Destroy this coach par avail", @coach_par_avail, method: :delete %>
+</div>

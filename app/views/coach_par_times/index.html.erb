@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Coach par times</h1>
+
+<div id="coach_par_times">
+  <% @coach_par_times.each do |coach_par_time| %>
+    <%= render coach_par_time %>
+    <p>
+      <%= link_to "Show this coach par time", coach_par_time %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New coach par time", new_coach_par_time_path %>
